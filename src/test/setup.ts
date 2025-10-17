@@ -9,7 +9,9 @@ afterEach(() => {
 
 if (typeof window.matchMedia !== "function") {
   window.matchMedia = (query: string) => {
-    const noop = () => {};
+    const noop = () => {
+      return;
+    };
 
     return {
       matches: false,
